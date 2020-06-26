@@ -22,7 +22,7 @@ For each record it is provided:
 - Triaxial acceleration from the accelerometer (total acceleration) and the estimated body acceleration.
 
 
-The old dataset includes the following files:
+The new dataset includes the following files:
 =========================================
 
 - 'README.md'
