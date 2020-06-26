@@ -1,5 +1,23 @@
 # Getting-and-Cleaning-Data-Course-Project
 
+
+Based on UCI HAR Dataset
+
+1.  X_train and X_test is row-binded together
+2.  y_train and y_test is row-binded together
+3.  subject_train and subject_test is row-binded together
+4.  Header names for X are read from UCI HAR Dataset/features.txt
+5.  Activity number in Y is changed to activity name based on activity_labels.txt
+6.  activity_stats is the result of column-binded of subject, Y, X after above modification
+7.  Column "subject" is renamed to "Subject#" and "Y" to "Activity"
+8.  activity_stats is saved into "activity_stats.txt"
+9.  per_activity_stats is created based on activity_stats which is splitted into group by Subject# and Activity
+10. ColMeans is applied to per_activity_stats on numeric column and is saved as per_activity_stats_mean
+11. per_activity_stats_mean is saved into file "per_activity_stats_mean.txt"
+
+
+
+
 ==================================================================
 Human Activity Recognition Using Smartphones Dataset
 Version 1.0
