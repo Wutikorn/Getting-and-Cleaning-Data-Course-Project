@@ -42,8 +42,12 @@ write.table(activity_stats, file = "activity_stats.txt")
 
 
 #5. From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
-per_activity_stats <- split(activity_stats, list(activity_stats$`Subject#`, activity_stats$Activity))
-per_activity_stats_mean <- lapply(per_activity_stats, function ( x ) {colMeans(x[sapply(x, is.numeric)])})
-write.table(per_activity_stats_mean, file = "per_activity_stats_mean.txt")
+activity_stats <- group_by(activity_stats, `Subject#`, Activity)
+per_activity_stats_mean <- summarize_each(activity_stats, mean)
+write.table(per_activity_stats_mean, file = "per_activity_stats_mean.txt", row.names = FALSE)
+
+#per_activity_stats <- split(activity_stats, list(activity_stats$`Subject#`, activity_stats$Activity))
+#per_activity_stats_mean <- lapply(per_activity_stats, function ( x ) {colMeans(x[sapply(x, is.numeric)])})
 
 
+write.table(names(activity_stats), file = "feature.txt")

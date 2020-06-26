@@ -11,8 +11,8 @@ Based on UCI HAR Dataset
 6.  activity_stats is the result of column-binded of subject, Y, X after above modification
 7.  Column "subject" is renamed to "Subject#" and "Y" to "Activity"
 8.  activity_stats is saved into "activity_stats.txt"
-9.  per_activity_stats is created based on activity_stats which is splitted into group by Subject# and Activity
-10. ColMeans is applied to per_activity_stats on numeric column and is saved as per_activity_stats_mean
+9.  activity_stats is then be grouped by Subject# and Activity 
+10. per_activity_stats_mean is created based on mean of activity_stats
 11. per_activity_stats_mean is saved into file "per_activity_stats_mean.txt"
 
 
